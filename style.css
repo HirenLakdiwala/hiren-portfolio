@@ -26,18 +26,6 @@ section {
   margin: auto;
 }
 
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-}
-
-.portfolio-grid img,
-.portfolio-grid video {
-  width: 100%;
-  border-radius: 10px;
-}
-
 .skills-list {
   display: flex;
   flex-wrap: wrap;
@@ -67,4 +55,28 @@ footer {
   color: #ccc;
   text-align: center;
   padding: 10px;
+}
+/* Fade-in animation on scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Button and nav hover animations */
+.button:hover {
+  background: #005bb5;
+  transform: scale(1.05);
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+nav a {
+  transition: color 0.3s ease;
+}
+nav a:hover {
+  color: #ffcc00;
 }
